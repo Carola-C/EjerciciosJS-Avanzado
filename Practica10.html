@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 10</title>
+</head>
+<body>
+    <script>
+        fetch('https://httpbin.org/ip')
+            .then(function(response){
+                console.log('response.body =',response.body);
+                console.log('response.bodyUsed =', response.bodyUsed);
+                console.log('response.headers =', response.headers);
+                console.log('response.ok =', response.ok);
+                console.log('response.status =',response.status);
+                console.log('respons.statusText =', response.statusText);
+                console.log('response.type =', response.type);
+                console.log('response.url = ', response.url);
+                return response.json();
+            })
+            .then(function(data){
+                console.log('data = ', data);
+            })
+            .catch(function(err){
+                console.log(err);
+            })
+    </script>
+</body>
+</html>
