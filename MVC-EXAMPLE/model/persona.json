@@ -1,0 +1,14 @@
+{
+    "nombre": "Hugo Sanchéz",
+    "edad": 43,
+    "email": "hugo.shanchez@gmail.com",
+    "sexo": "h",
+    "telefono": "2781092116",
+    "color": "#2d572c",
+    "fechaNacimiento": "1976-10-08",
+    "trabajo":{
+        "puesto": "Desarrollador",
+        "email": "hugo.sanchez@consultora.team",
+        "telefono": "4455332599"
+    }
+}

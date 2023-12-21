@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo MVC</title>
+</head>
+<body>
+    <form id="contact_form" action="" method="post" name="contact_form">
+        <h1>Información de Persona</h1>
+        <section>
+            <fieldset>
+                <legend>Sexo</legend>
+                <label for="sexo" class="etiqueta">
+                    <input type="radio" value="H" name="sexo" id="sexo"> Hombre
+                </label>
+                <label for="sexo2">
+                    <input type="radio" value="M" name="sexo" id="sexo2"> Mujer
+                </label>
+                <input type="radio" value="0" name="sexo" id="sexo3">
+                <label for="sexo3">Otro</label>
+            </fieldset>
+
+            <section>
+                <h3>Información Personal</h3>
+                <p>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                    <label for="numero">Edad
+                        <input type="number" name="edad" id="numero">
+                    </label>
+                </p>
+                <p>
+                    <label for="telefono">Teléfono
+                        <input type="tel" name="telefono" id="telefono"
+                        placeholder="(555)-555-1234">
+                    </label>
+                </p>
+                <p>
+                    <label for="fecha-nacimiento">Fehca de nacimiento 
+                        <input type="date" name="fechaNacimiento" id="fecha-nacimiento">
+                    </fecha-nacimiento></label>
+                </p>
+                <p>
+                    <label for="color-favorito">Color
+                        <input type="color" name="color" id="color-favorito">
+                    </label>
+                </p>
+            </section>
+            <p>
+                <button type="submit" onclick="MVC.controllerInstance">
+                    Guardar
+                </button>
+            </p>
+        </section>
+    </form>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./js/controller.js"></script>
+    <script type="text/javascript" src="./js/model.js"></script>
+    <script type="text/javascript" src="./js/view.js"></script>
+</body>
+</html>
