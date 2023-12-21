@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function getReq(url){
+            const req = new Promise(function( resolve, reject ){
+                const request = new XMLHttpRequest();
+                request.addEventListener('load', ()=>{
+                    console.log('en el listener de load... ');
+                    if (request.status ===200) {
+                        resolve(request.response);
+                    } else {
+                        reject(request.statusText);
+                    }
+                });
+
+                request.addEventListener('error', () =>{
+                    console.log('en el listener de error... ');
+                    reject("Error de red");
+                });
+
+                request.open('GET', url,true);
+                request.send(null);
+            });
+            return req;
+        }
+        getReq('./json/persona.json')
+        .then(res =>{
+            return JSON.parse(res);
+        })
+        .then( json =>{
+            console.log(json);
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+    </script>
+</body>
+</html>
